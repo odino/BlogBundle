@@ -1,0 +1,24 @@
+posts:
+    pattern:  /posts
+    defaults: { _controller: BlogBundle:Post:posts }
+    requirements:
+      _method: (GET|POST)
+
+post_create:
+    pattern:  /posts/add
+    defaults: { _controller: BlogBundle:Post:add }
+    requirements:
+      _method: (GET)
+
+post:
+    pattern:  /posts/:id
+    defaults: { _controller: BlogBundle:Post:post }
+    requirements:
+      _method: (GET)
+
+post_delete:
+    pattern:  /posts/:id/delete
+    defaults: { _controller: BlogBundle:Post:postDelete }
+    requirements:
+      _method: (GET|DELETE)
+
